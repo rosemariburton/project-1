@@ -6,12 +6,13 @@
 // #### SET GLOBAL VARIABLES SECTION
 
 // #### FUNCTIONS SECTION
-// ---- Signup (Create and store new user info)
-// ---- Login (Retrieve user info)
+// ---- Signup - Create and store new user info (Stretch Goal)
+// ---- Login  - Retrieve user info (Stretch Goal)
 // ---- Set Difficulty Level
 // ---- Get Simon Array
-// ---- Step Thru Simon Array
-// ---- 4 Second Wait For User Input
+// ---- Step Thru Simon Array to play sequence
+// ---- Shuffle
+// ---- Timer: Second Wait on User Input
 // ---- Is Correct
 // ---- Update Score
 // ---- Update Player Array
@@ -21,13 +22,8 @@
 // ---- Is End
 
 // #### DATA
-// ---- Simon Sequence
-// ---- Player Sequence
+// ---- User Profile (Stretch Goal)
+// ---- Simon Sequence - array of colors
+// ---- Player Sequence - array of colors
 // ---- Top Five (Stretch Goal)
-// ---- 
-// ---- 
-// ---- 
-// ---- 
-// ---- 
-// ---- 
-// ---- 
+// ---- Difficulty Levels - novice, normal, expert
