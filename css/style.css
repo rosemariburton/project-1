@@ -1,0 +1,149 @@
+body{
+    background-image: url()
+}
+
+#hexagon {
+    width: 100px;
+    height: 55px;
+    background: hsla(195, 52%, 79%, 0.171);
+    position: relative;
+  }
+  #hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid hsla(195, 52%, 79%, 0.171);
+  }
+  #hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid hsla(195, 52%, 79%, 0.171);
+  }
+
+  /*         #### RED                */
+  #redhex {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: relative;
+  }
+  #redhex:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid red;
+  }
+  #redhex:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid red;
+  }
+  /*            #### BLUE           */
+  #bluehex {
+    width: 100px;
+    height: 55px;
+    background: blue;
+    position: relative;
+  }
+  #bluehex:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid blue;
+  }
+  #bluehex:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid blue;
+  }
+  /*            #### GREEN           */
+  #greenhex {
+    width: 100px;
+    height: 55px;
+    background: green;
+    position: relative;
+  }
+  #greenhex:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid green;
+  }
+  #greenhex:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid green;
+  }
+  /*            #### YELLOW           */
+  #yellowhex {
+    width: 100px;
+    height: 55px;
+    background: yellow;
+    position: relative;
+  }
+  #yellowhex:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid yellow;
+  }
+  #yellowhex:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid yellow;
+  }
