@@ -1,11 +1,25 @@
-// #### EVENT HANDLER SECTIN
+// #### ----------------------------------------      EVENT HANDLER SECTIN        ####  ####  ####  ####  ####  ####  ####  ####
 // ---- Load
-// ---- Error
-// ---- Player Click
+// document.addEventListener("load", function(){
 
-// #### SET GLOBAL VARIABLES SECTION
+// }
+// document.addEventListener("error", function(){
 
-// #### FUNCTIONS SECTION
+// }
+// document.addEventListener("click", function(){
+
+// }
+// document.addEventListener("canplay", function(){
+
+// }
+
+
+
+// #### ----------------------------------------     SET VARIABLES SECTION    ------------------------------------------------  ####
+
+
+
+// ####  ----------------------------------------       FUNCTIONS SECTION      ------------------------------------------------ ####
 // ---- Signup - Create and store new user info (Stretch Goal)
 // ---- Login  - Retrieve user info (Stretch Goal)
 // ---- Set Difficulty Level
@@ -21,7 +35,9 @@
 // ---- Winning Wrap-up
 // ---- Is End
 
-// #### DATA
+
+
+// ####  ----------------------------------------           DATA           ------------------------------------------------  ####
 // ---- User Profile (Stretch Goal)
 // let user = [
 //     { avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30" },
