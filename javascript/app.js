@@ -60,6 +60,12 @@ let getMoreSequences = () => {
 // ---- Timer: Second Wait on User Input
 
 // ---- Is Correct
+let isCorrect = (iArray) => {
+    if(player[iArray] === simon[iArray]){
+        return true
+    }
+    return false
+}
 
 // ---- Update Score
 let updateScore = () => {
