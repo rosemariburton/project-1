@@ -1,7 +1,11 @@
 body{
     background-image: url()
 }
+/* HEXAGON INSPIRATION FROM: 
+URL:  https://www.sarasoueidan.com/blog/css-shapes/
 
+
+*/
 #hexagon {
     width: 100px;
     height: 55px;
