@@ -58,6 +58,7 @@ let getMoreSequences = () => {
 // ---- Step Thru Simon Array to play sequence
 // ---- Shuffle - changes the order of my divs but uses the array traditionalSimon
 // ---- Timer: Second Wait on User Input
+// onclick="setTimeout(losingWrapUp(), 4000)"
 
 // ---- Is Correct
 let isCorrect = (iArray) => {
@@ -81,6 +82,9 @@ let addToPlayer = (addColor) => {
 
 // ---- Is End
 // ---- Losing Wrap-up
+let losingWrapUp = () => {
+    
+}
 // ---- Winning Wrap-up
 // ---- Is End
 
