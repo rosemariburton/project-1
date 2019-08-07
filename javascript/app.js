@@ -23,7 +23,14 @@
 
 // #### DATA
 // ---- User Profile (Stretch Goal)
+
 // ---- Simon Sequence - array of colors
 // ---- Player Sequence - array of colors
 // ---- Top Five (Stretch Goal)
-// ---- Difficulty Levels - novice, normal, expert
+
+// ---- Simon Games - traditional, music, lights out,shuffle
+//      traditional - repeat the pattern Simon sets
+//      musical     - finish the song before Simon
+//      lights out  - sound only, play by ear
+//      shuffle     - rearrange position after Simon's turn
+let games = ["traditional","music","lights-outerHeight","shuffle"]
