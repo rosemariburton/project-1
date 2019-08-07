@@ -25,6 +25,17 @@
 // ---- User Profile (Stretch Goal)
 
 // ---- Simon Sequence - array of colors
+let traditionalSimon = {
+    ["Itsy-Bitsy Spider",G,C,C,C,D,E,E,E,D,C,D,E,C,E,E,F,G,G,F,E,F,G,E,C,C,D,E,E,D,C,D,E,C,G,G,C,C,C,D,E,E,E,D,C,D,E,C],
+    [],
+    [],
+    [],
+    [],
+    []}
+let musicalSimon = []
+let lightsOutSimon = []
+let shuffleSimon = []
+
 // ---- Player Sequence - array of colors
 // ---- Top Five (Stretch Goal)
 
@@ -33,4 +44,4 @@
 //      musical     - finish the song before Simon
 //      lights out  - sound only, play by ear
 //      shuffle     - rearrange position after Simon's turn
-let games = ["traditional","music","lights-outerHeight","shuffle"]
+let games = ["traditional","musical","lightsOutSimon","shuffleSimon"]
