@@ -1,5 +1,6 @@
 // #### ----------------------------------------     SET VARIABLES SECTION    ------------------------------------------------  ####
-let [randNumber,correct,total,score] = [0,0,0,0]
+let [randNumber, correct, total, score] = [0, 0, 0, 0]
+let isCorrect = true
 
 // ####  ----------------------------------------           DATA           ------------------------------------------------  ####
 // ---- User Profile (Stretch Goal)
@@ -37,36 +38,32 @@ let player = []
 let games = ["traditional", "musical", "lightsOut", "shuffle"]
 
 
-
-
 // ####  ----------------------------------------       FUNCTIONS SECTION      ------------------------------------------------ ####
 // ---- Signup - Create and store new user info (Stretch Goal)
 // ---- Login  - Retrieve user info (Stretch Goal)
 // ---- Set Difficulty Level
 
+// -1--- Begin New Game
+let newGame = () => {
 
-// ---- Add 20 Random Sequences to Simon Array
-let getMoreSequences = () => {
-    for(let x = 0; x < 20; x++){
-        randNumber = Math.floor(Math.random() * Math.floor(4))
-        simon.push(colors[randNumber])
-    }
 }
 
-
-// ---- Get Simon Array - parameters 
-// ---- Step Thru Simon Array to play sequence
-// ---- Shuffle - changes the order of my divs but uses the array traditionalSimon
-// ---- Timer: Second Wait on User Input
-// onclick="setTimeout(losingWrapUp(), 4000)"
-
-// ---- Is Correct
-let isCorrect = (iArray) => {
-    if(player[iArray] === simon[iArray]){
-        return true
-    }
-    return false
+// ---- Add a random sequences to Simon Array
+let getNextSequence = () => {
+    randNumber = Math.floor(Math.random() * Math.floor(4))
+    simon.push(colors[randNumber])
 }
+
+// -1--- Get Simon Array - parameters 
+//      Step Thru Simon Array to play sequence
+//      play sound, light up, whosTurn(player) 
+//      end of simon array -- getNextSequence
+//      end of game -- endGame
+
+// -1--- Shuffle - changes the order of my divs but uses the array simon[]
+
+// -1--- Timer: Second Wait on User Input
+// add listener to  player's turn: addEventListener("click", setTimeout(losingWrapUp(), 4000)
 
 // ---- Update Score
 let updateScore = () => {
@@ -75,21 +72,58 @@ let updateScore = () => {
     score = `${correct} out of ${total}`
     return score
 }
+
 // ---- Update Player Array
 let addToPlayer = (addColor) => {
-    return player.push(addColor)
+    player.push(addColor)
 }
 
-// ---- Is End
-// ---- Losing Wrap-up
+// -1--- End Game
+let endGame = () => {
+    //won - winningWrapUp
+    //lost - losingWrapUp
+    //display stats prominently on screen
+    //blink new game button
+}
+
+// ---- Is the current selection correct
+let evalResponse = (iArray) => {
+    if (player[iArray] === simon[iArray]) {
+        addToPlayer()
+        updateScore()
+        return isCorrect
+    }
+    isCorrect = false
+    return isCorrect
+    endGame()
+}
+// -1--- Losing Wrap-up
 let losingWrapUp = () => {
-    
+
 }
-// ---- Winning Wrap-up
-// ---- Is End
+// -1--- Winning Wrap-up
+let winningWrapUp = () => {
 
+}
 
-
+//^^^REMOVE CONSOLE LOG TESTING
+console.log(randNumber, correct, total, score)
+console.log(isCorrect)
+console.log(user)
+console.log(colors)
+console.log(simon)
+console.log(musical)
+console.log(player)
+console.log(games)
+console.log(newGame)
+getNextSequence()
+console.log(simon)
+addToPlayer("blue")
+console.log(player)
+updateScore()
+console.log(score)
+evalResponse(0)
+console.log(evalResponse(0))
 
 // #### ----------------------------------------      EVENT HANDLER SECTIN        ####  ####  ####  ####  ####  ####  ####  ####
 // ---- Load
@@ -100,7 +134,7 @@ let losingWrapUp = () => {
 
 // }
 // document.addEventListener("click", function(){
-
+//play sound, light up, whosTurn(simon) 
 // }
 // document.addEventListener("canplay", function(){
 

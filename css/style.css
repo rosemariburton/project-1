@@ -1,10 +1,11 @@
-body{
-    background-image: url()
+body {
+    /* Image sourced from: https://mathgeekmama.com/math-in-nature/ */
+    /* background: url("/images/videoblocks-black-hexagon-background-3d-render_riwskh-vg_thumbnail-full01.png"); */
+    background-color: black;
 }
+
 /* HEXAGON INSPIRATION FROM: 
 URL:  https://www.sarasoueidan.com/blog/css-shapes/
-
-
 */
 #hexagon {
     width: 100px;
