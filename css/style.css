@@ -35,9 +35,19 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-right: 50px solid transparent;
     border-top: 25px solid hsla(195, 52%, 79%, 0.171);
   }
-
-  /*         #### RED                */
-  #redhex {
+  #hexagon img {
+    display:inline-block;
+    vertical-align:middle;
+    margin:0 -10px;
+  }
+  #hexagon > .contents {
+    background-image: url("images/bubbles.jpg");
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 25%; right: 25%; 
+  }
+/* #### RED                */
+  /* #redhex {
     width: 100px;
     height: 55px;
     background: red;
@@ -64,9 +74,9 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 25px solid red;
-  }
+  } */
   /*            #### BLUE           */
-  #bluehex {
+  /* #bluehex {
     width: 100px;
     height: 55px;
     background: blue;
@@ -93,9 +103,9 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 25px solid blue;
-  }
+  } */
   /*            #### GREEN           */
-  #greenhex {
+  /* #greenhex {
     width: 100px;
     height: 55px;
     background: green;
@@ -122,9 +132,9 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 25px solid green;
-  }
+  } */
   /*            #### YELLOW           */
-  #yellowhex {
+  /* #yellowhex {
     width: 100px;
     height: 55px;
     background: yellow;
@@ -151,4 +161,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 25px solid yellow;
-  }
+  } */
+  .hex nth-child(6n+4) { 
+    margin-left: 0.5%;
+}

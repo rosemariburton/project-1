@@ -43,11 +43,6 @@ let games = ["traditional", "musical", "lightsOut", "shuffle"]
 // ---- Login  - Retrieve user info (Stretch Goal)
 // ---- Set Difficulty Level
 
-// -1--- Begin New Game
-let newGame = () => {
-
-}
-
 // ---- Add a random sequences to Simon Array
 let getNextSequence = () => {
     randNumber = Math.floor(Math.random() * Math.floor(4))
@@ -77,15 +72,23 @@ let updateScore = () => {
 let addToPlayer = (addColor) => {
     player.push(addColor)
 }
+// -1--- Losing Wrap-up
+let losingWrapUp = () => {
 
+}
+// -1--- Winning Wrap-up
+let winningWrapUp = () => {
+
+}
 // -1--- End Game
 let endGame = () => {
     //won - winningWrapUp
     //lost - losingWrapUp
-    //display stats prominently on screen
+    //display stats prominently on screen in a modal
+    //isCorrect = true
     //blink new game button
-}
 
+}
 // ---- Is the current selection correct
 let evalResponse = (iArray) => {
     if (player[iArray] === simon[iArray]) {
@@ -97,15 +100,13 @@ let evalResponse = (iArray) => {
     return isCorrect
     endGame()
 }
-// -1--- Losing Wrap-up
-let losingWrapUp = () => {
-
-}
-// -1--- Winning Wrap-up
-let winningWrapUp = () => {
-
-}
-
+// -1--- Begin New Game
+let newGame = () => {
+    //play sound, light up,
+    //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
+    
+    
+    }
 //^^^REMOVE CONSOLE LOG TESTING
 console.log(randNumber, correct, total, score)
 console.log(isCorrect)
@@ -125,17 +126,22 @@ console.log(score)
 evalResponse(0)
 console.log(evalResponse(0))
 
-// #### ----------------------------------------      EVENT HANDLER SECTIN        ####  ####  ####  ####  ####  ####  ####  ####
+// #### ----------------------------------------          GAME THREAD  
+
+
+// #### ----------------------------------------      EVENT HANDLER SECTION        ####  ####  ####  ####  ####  ####  ####  ####
 // ---- Load
 // document.addEventListener("load", function(){
 
-// }
+// })
 // document.addEventListener("error", function(){
 
-// }
-// document.addEventListener("click", function(){
-//play sound, light up, whosTurn(simon) 
-// }
+// })
+document.getElementById("_btnStart").addEventListener("click", function () {
+    endGame()
+    console.log("My Game Is Working");
+
+})
 // document.addEventListener("canplay", function(){
 
-// }
+//})
