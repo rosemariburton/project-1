@@ -48,6 +48,19 @@ let getNextSequence = () => {
     randNumber = Math.floor(Math.random() * Math.floor(4))
     simon.push(colors[randNumber])
 }
+// ---- Initialize the Match
+let initalizeMatch = () => {
+    console.log("Match Initialized")
+}
+
+// ---- Take a turn
+let takeTurn = () => {
+    
+}
+
+//      simulate a click of simon's choosen button
+//      the div should light up and make a sound
+
 
 // -1--- Get Simon Array - parameters 
 //      Step Thru Simon Array to play sequence
@@ -104,7 +117,7 @@ let evalResponse = (iArray) => {
 let newGame = () => {
     //play sound, light up,
     //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
-    
+    initalizeMatch()
     
     }
 //^^^REMOVE CONSOLE LOG TESTING
@@ -138,9 +151,7 @@ console.log(evalResponse(0))
 
 // })
 document.getElementById("_btnStart").addEventListener("click", function () {
-    endGame()
-    console.log("My Game Is Working");
-
+    newGame()
 })
 // document.addEventListener("canplay", function(){
 
