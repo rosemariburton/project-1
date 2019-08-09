@@ -1,8 +1,6 @@
-// #### ----------------------------------------     SET VARIABLES SECTION    ------------------------------------------------  ####
-let [randNumber, correct, total, score] = [0, 0, 0, 0]
-let isCorrect = true
+// ####  ----------------------------------------           GAME DATA           ------------------------------------------------  ####
+let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, 0, "active", 0, 0]
 
-// ####  ----------------------------------------           DATA           ------------------------------------------------  ####
 // ---- User Profile (Stretch Goal)
 let user = [
     { avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30" },
@@ -28,7 +26,7 @@ let musical = [
 let player = []
 
 // ---- Top Five (Stretch Goal)
-// let topFivePlayers = [fml,correct,total,%]
+//let topFivePlayers = [fml,correct,total,%]
 
 // ---- Simon Games - traditional,music,lights out,shuffle
 //      traditional - repeat the pattern Simon sets
@@ -38,68 +36,63 @@ let player = []
 let games = ["traditional", "musical", "lightsOut", "shuffle"]
 
 
-// ####  ----------------------------------------       FUNCTIONS SECTION      ------------------------------------------------ ####
+// ####  ----------------------------------------       GAME FUNCTIONS      ------------------------------------------------ ####
 // ---- Signup - Create and store new user info (Stretch Goal)
 // ---- Login  - Retrieve user info (Stretch Goal)
 // ---- Set Difficulty Level
 
 // ---- Add a random sequences to Simon Array
 let getNextSequence = () => {
+    console.log("Get the next sequence for Simon to play.")
     randNumber = Math.floor(Math.random() * Math.floor(4))
     simon.push(colors[randNumber])
 }
 // ---- Initialize the Match
 let initalizeMatch = () => {
+    [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, 0, "active", 0, 0]
     console.log("Match Initialized")
 }
-
 // ---- Take a turn
-let takeTurn = () => {
-    
+let takeTurn = (whosTurn, match) => {
+    console.log(`It is ${whosTurn}'s turn and the match is ${match}.`)
+    // simulate a click of simon's choosen button
+    // the div should light up and make a sound
+
+    // player is on a 4 second timer
 }
-
-//      simulate a click of simon's choosen button
-//      the div should light up and make a sound
-
-
-// -1--- Get Simon Array - parameters 
-//      Step Thru Simon Array to play sequence
-//      play sound, light up, whosTurn(player) 
-//      end of simon array -- getNextSequence
-//      end of game -- endGame
 
 // -1--- Shuffle - changes the order of my divs but uses the array simon[]
 
-// -1--- Timer: Second Wait on User Input
-// add listener to  player's turn: addEventListener("click", setTimeout(losingWrapUp(), 4000)
-
 // ---- Update Score
 let updateScore = () => {
-    correct = player.length
+    if(player[iArray === simon[iArray]]){ 
+        correct++
+    }
     total = simon.length
     score = `${correct} out of ${total}`
+    console.log(score)
     return score
 }
-
 // ---- Update Player Array
 let addToPlayer = (addColor) => {
     player.push(addColor)
 }
 // -1--- Losing Wrap-up
 let losingWrapUp = () => {
-
+    console.log("losingWrapUp")
 }
 // -1--- Winning Wrap-up
 let winningWrapUp = () => {
-
+    console.log("WinningWrapUp")
 }
 // -1--- End Game
 let endGame = () => {
     //won - winningWrapUp
     //lost - losingWrapUp
     //display stats prominently on screen in a modal
-    //isCorrect = true
+    //match = true
     //blink new game button
+    console.log("End Game")
 
 }
 // ---- Is the current selection correct
@@ -107,22 +100,35 @@ let evalResponse = (iArray) => {
     if (player[iArray] === simon[iArray]) {
         addToPlayer()
         updateScore()
-        return isCorrect
+        match = "active"
+        return match
     }
-    isCorrect = false
-    return isCorrect
-    endGame()
+    match = "complete"
+    return match
 }
 // -1--- Begin New Game
 let newGame = () => {
-    //play sound, light up,
-    //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
     initalizeMatch()
-    
+    // order of play
+    // simon initiatesplay
+        //play sound, light up,
+        //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
+    // timer is set for player
+    // if played in time results are evaluated
+    // if time expires then match="expired"
+    // if player presses esc then match="canceled"
+    while (match === "active") {
+        takeTurn("the computer", "active")
+        timesUp = setTimeout(endGame(), 4000)
+        takeTurn("the current player", evalResponse(iArray))
+        console.log(iArray)
+        iArray++
     }
+
+}
 //^^^REMOVE CONSOLE LOG TESTING
-console.log(randNumber, correct, total, score)
-console.log(isCorrect)
+console.log(randNumber, correct, total, score, match)
+console.log(match)
 console.log(user)
 console.log(colors)
 console.log(simon)
@@ -134,10 +140,11 @@ getNextSequence()
 console.log(simon)
 addToPlayer("blue")
 console.log(player)
-updateScore()
-console.log(score)
+// updateScore()
 evalResponse(0)
 console.log(evalResponse(0))
+console.log("newGame()")
+newGame()
 
 // #### ----------------------------------------          GAME THREAD  
 
@@ -147,11 +154,16 @@ console.log(evalResponse(0))
 // document.addEventListener("load", function(){
 
 // })
-// document.addEventListener("error", function(){
-
-// })
+// document.addEventListener("keypress", function(e){
+//     if(e.key === "Escape"){
+document.onkeypress = function(event){
+    if(event.key === 27){
+        match = "canceled"
+        console.log("canceled")
+    }
+}
 document.getElementById("_btnStart").addEventListener("click", function () {
-    newGame()
+    clearTimeout(timesUp)
 })
 // document.addEventListener("canplay", function(){
 
