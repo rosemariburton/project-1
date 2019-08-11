@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>HexaBlock</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" align="left'">
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/homeycombs.css" /> -->
+    <!-- CSS-Tricks  The Simplest Way to Load CSS Asynchronously -->
+    <!-- by using media="print" basically says apply wip.css only when printing -->
+    <!-- the browser will load the css without delays to rendering the page     -->
+    <!-- ASYNCHRONOUSLY.  The onload attribute set to this.media = all  says    -->
+    <!-- css applies to this screen on load.                                    -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <title>Winnie the Pooh's Bee Factory</title>
 </head>
+
 <body>
-    <div class="container">
-        <header></header>
-        <div class="innerContainer">
-            <div class="contents">
-                <div class="item" id="hexagon">1</div>
-                <div class="item" id="hexagon">2</div>
-                <div class="item" id="hexagon">3</div>
-                <div class="item" id="hexagon">4</div>
-                <div class="item" id="hexagon">5</div>
-                <div class="item" id="hexagon">6</div>
-                <div class="item" id="hexagon">7</div>
-                <div class="item" id="hexagon">8</div>
-                <div class="item" id="hexagon">9</div>
-                <div class="item" id="hexagon">10</div>
-                <div class="item" id="hexagon">11</div>
-                <div class="item" id="hexagon">12</div>
-            </div>
+    <header>Winnie the Pooh's Bee Factory</header>
+    <img class="upperRight" src="images/6621b60df6e60771adb2e01fd3602197.gif" alt="pooh" align="right">
+    <img class="scoreboard" src="images/cartoon-wooden-sign-png-clipart_2702935.png" alt="pot" align="left">
+    <!-- <img class="backdrop" src="images/animated-backdrop.gif" alt="back" align="bottom"> -->
+    <div class="container">Container
+        
+
+        <div class="honeycombs">
+            <div class="comb" id="hexagon">1</div>
+            <div class="comb" id="redhex">2</div>
+            <div class="comb" id="bluehex">3</div>
+            <div class="comb" id="yellowhex">4</div>
+            <div class="comb" id="greenhex">5</div>
+            <div class="comb" id="hexagon">6</div>
+            <div class="comb" id="hexagon">7</div>
+            <div class="comb" id="hexagon">8</div>
+            <div class="comb" id="hexagon">9</div>
+            <div class="comb" id="hexagon">10</div>
+            <div class="comb" id="hexagon">11</div>
+            <div class="comb" id="hexagon">12</div>
         </div>
-        <input class="btnStart" id="_btnStart" type="button" value="Start">
-        <div class="playClock" id="_divPlayClock"></div>
-        <div class="scoreBoard" id="_divScoreBoard"></div>
     </div>
-    
+
+    <div class="scoreboard">
+        <ul class="tabSet" id="liTabSet">
+            <li><span>Scoreboard</span></li>
+            <li>🧛 Rosemari <span>20</span></li>
+            <li><span>🐝 Bees <span>21</span></li>
+            <li>Timer: <span>02 seconds</span></li>
+        </ul>
+    </div>
+    <div class="buttonGroup">
+        <button class="btn" id="btnStart">Start</button>
+        <button class="btn" id="btnEnd">End</button>
+    </div>
+    </div>
+
+
+    <div class="modal">
+
+    </div>
+
     <script src="javascript/app.js"></script>
 </body>
+
 </html>

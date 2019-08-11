@@ -1,53 +1,93 @@
 body {
-    /* Image sourced from: https://mathgeekmama.com/math-in-nature/ */
-    /* background: url("/images/videoblocks-black-hexagon-background-3d-render_riwskh-vg_thumbnail-full01.png"); */
-    background-color: black;
+  z-index: -5000;
+  cursor: url(images/bee_PNG74719.png);
+  font-family: 'Schoolbell', cursive;
+  font-size: 1.5em;
+  background-color: black;
+  color: whitesmoke;
 }
-
+.backdrop{
+  z-index: -1000;
+  /* height: 80%; */
+  position: absolute;
+  top: 0px;
+  /* right: 0px; */
+}
+.upperRight{
+  z-index: 5000;
+  height: 80%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.scoreboard, .tabSet{
+  z-index: 5000;
+  height: 30%;
+  width: 30%;
+  text-align: center;
+  /* background-color: black; */
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.buttonGroup{
+  position: absolute;
+  font: 3em;
+}
+ul {
+  display: contents;
+}
+li {
+  list-style: none;
+  font-size: 100%;
+  overflow: hidden;
+}
 /* HEXAGON INSPIRATION FROM: 
 URL:  https://www.sarasoueidan.com/blog/css-shapes/
 */
+/* ========================================= */
 #hexagon {
-    width: 100px;
-    height: 55px;
-    background: hsla(195, 52%, 79%, 0.171);
-    position: relative;
-  }
-  #hexagon:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid hsla(195, 52%, 79%, 0.171);
-  }
-  #hexagon:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid hsla(195, 52%, 79%, 0.171);
-  }
-  #hexagon img {
+  width: 100px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.288);
+  position: relative;
+}
+#hexagon:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid rgba(255, 255, 255, 0.288);
+}
+#hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid rgba(255, 255, 255, 0.288);
+}
+  /* #hexagon img {
     display:inline-block;
     vertical-align:middle;
     margin:0 -10px;
-  }
-  #hexagon > .contents {
-    background-image: url("images/bubbles.jpg");
+  } */
+  /* #hexagon > .contents {
     position: absolute;
     top: 0; bottom: 0;
     left: 25%; right: 25%; 
-  }
+  } */
+  /* ========================================= */
 /* #### RED                */
-  /* #redhex {
+  #redhex {
     width: 100px;
     height: 55px;
     background: red;
@@ -74,9 +114,10 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 25px solid red;
-  } */
+  }
+  /* ========================================= */
   /*            #### BLUE           */
-  /* #bluehex {
+  #bluehex {
     width: 100px;
     height: 55px;
     background: blue;
@@ -102,10 +143,11 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 25px solid blue;
-  } */
+    border-top: 25px solid blue;
+  }
+  /* ========================================= */
   /*            #### GREEN           */
-  /* #greenhex {
+  #greenhex {
     width: 100px;
     height: 55px;
     background: green;
@@ -131,10 +173,11 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 25px solid green;
-  } */
+    border-top: 25px solid green;
+  }
+  /* ========================================= */
   /*            #### YELLOW           */
-  /* #yellowhex {
+  #yellowhex {
     width: 100px;
     height: 55px;
     background: yellow;
@@ -160,8 +203,29 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 25px solid yellow;
+    border-top: 25px solid yellow;
+  }
+  /* ========================================= */
+  .honeycombs{
+    display: block;
+    position: relative;
+    width: 60%;
+    margin:0 auto;
+    padding: 0;
+  }
+  /* .honeycombs div * {
+    visibility: visible;
+  }
+  .honeycombs:after{
+    content: "";
+    display: block;
+    clear: both;
   } */
-  .hex nth-child(6n+4) { 
-    margin-left: 0.5%;
+  /* 6n+4 select the 2nd hex of each row*/
+  .honeycombs div:nth-child(3n+2) { 
+    margin-left: 1%;
+}
+  /* 6n+4 shifts rows with left margin */
+.honeycombs div:nth-child(6n+4) { 
+  margin-left: 0.5%;
 }

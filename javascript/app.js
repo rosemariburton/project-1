@@ -1,15 +1,24 @@
+$(document).ready(function() {
+    $('.honeycombs').honeycombs({
+        combWidth: 250,
+        margin: 10
+    })
+})
+
 // ####  ----------------------------------------           GAME DATA           ------------------------------------------------  ####
-let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, 0, "active", 0, 0]
+let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, "", "active", 0, 0]
 
 // ---- User Profile (Stretch Goal)
+// array of objects
+// ****
 let user = [
-    { avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30" },
-    { avatar: "🖖", flm: "nim", password: "passWorD", topScore: "25" },
-    { avatar: "👽", flm: "et", password: "123abc!@#", topScore: "20" }
+{avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30"},
+{avatar: "🖖", flm: "nim", password: "passWorD", topScore: "25"},
+{avatar: "👽", flm: "et", password: "123abc!@#", topScore: "20"}
 ]
 
 // ---- Colors Array
-let colors = ["red", "blue", "green", "yellow"]
+let colors = ["red", "blue", "green", "yellow","blue"]
 
 // ---- Simon Sequence Array traditional, random array of colors 
 let simon = []
@@ -26,6 +35,7 @@ let musical = [
 let player = []
 
 // ---- Top Five (Stretch Goal)
+//write to a file
 //let topFivePlayers = [fml,correct,total,%]
 
 // ---- Simon Games - traditional,music,lights out,shuffle
@@ -42,7 +52,7 @@ let games = ["traditional", "musical", "lightsOut", "shuffle"]
 // ---- Set Difficulty Level
 
 // ---- Add a random sequences to Simon Array
-let getNextSequence = () => {
+let addToSimon = () => {
     console.log("Get the next sequence for Simon to play.")
     randNumber = Math.floor(Math.random() * Math.floor(4))
     simon.push(colors[randNumber])
@@ -54,9 +64,15 @@ let initalizeMatch = () => {
 }
 // ---- Take a turn
 let takeTurn = (whosTurn, match) => {
+    if (whosTurn === "computer") {
+        addToSimon()
+    } else {
+        addToPlayer()
+    }
     console.log(`It is ${whosTurn}'s turn and the match is ${match}.`)
     // simulate a click of simon's choosen button
     // the div should light up and make a sound
+
 
     // player is on a 4 second timer
 }
@@ -65,7 +81,7 @@ let takeTurn = (whosTurn, match) => {
 
 // ---- Update Score
 let updateScore = () => {
-    if(player[iArray === simon[iArray]]){ 
+    if (player[iArray === simon[iArray]]) {
         correct++
     }
     total = simon.length
@@ -75,7 +91,7 @@ let updateScore = () => {
 }
 // ---- Update Player Array
 let addToPlayer = (addColor) => {
-    player.push(addColor)
+    // player.push(addColor)
 }
 // -1--- Losing Wrap-up
 let losingWrapUp = () => {
@@ -83,15 +99,21 @@ let losingWrapUp = () => {
 }
 // -1--- Winning Wrap-up
 let winningWrapUp = () => {
-    console.log("WinningWrapUp")
+    console.log("winningWrapUp")
+    sessionStorage.setItem('Player', user)
 }
 // -1--- End Game
 let endGame = () => {
-    //won - winningWrapUp
-    //lost - losingWrapUp
+    if ((match === "complete") || (match === "canceled")) {
+        winningWrapUp()
+    } else {
+        losingWrapUp()
+    }
+
     //display stats prominently on screen in a modal
     //match = true
     //blink new game button
+
     console.log("End Game")
 
 }
@@ -100,7 +122,7 @@ let evalResponse = (iArray) => {
     if (player[iArray] === simon[iArray]) {
         addToPlayer()
         updateScore()
-        match = "active"
+        // match = "active"
         return match
     }
     match = "complete"
@@ -111,20 +133,21 @@ let newGame = () => {
     initalizeMatch()
     // order of play
     // simon initiatesplay
-        //play sound, light up,
-        //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
+    //play sound, light up,
+    //LOOP: myTurn(simon),timer(myTurn(player)),evalResponse :exit- if isCorrect = false (wrong answer)
     // timer is set for player
     // if played in time results are evaluated
     // if time expires then match="expired"
     // if player presses esc then match="canceled"
-    while (match === "active") {
-        takeTurn("the computer", "active")
-        timesUp = setTimeout(endGame(), 4000)
-        takeTurn("the current player", evalResponse(iArray))
-        console.log(iArray)
-        iArray++
+    for (let upperLimit = 0; upperLimit != -1; upperLimit++) {
+        takeTurn("computer", "active")
+        player = []
+        for (let lowerLimit = 0; lowerLimit < simon.length; lowerLimit++) {
+            timesUp = setTimeout(endGame(), 40000)
+            takeTurn("human", evalResponse(lowerLimit))
+            console.log(lowerLimit)
+        }
     }
-
 }
 //^^^REMOVE CONSOLE LOG TESTING
 console.log(randNumber, correct, total, score, match)
@@ -136,7 +159,7 @@ console.log(musical)
 console.log(player)
 console.log(games)
 console.log(newGame)
-getNextSequence()
+addToSimon()
 console.log(simon)
 addToPlayer("blue")
 console.log(player)
@@ -144,7 +167,9 @@ console.log(player)
 evalResponse(0)
 console.log(evalResponse(0))
 console.log("newGame()")
-newGame()
+// newGame()
+
+
 
 // #### ----------------------------------------          GAME THREAD  
 
@@ -156,14 +181,19 @@ newGame()
 // })
 // document.addEventListener("keypress", function(e){
 //     if(e.key === "Escape"){
-document.onkeypress = function(event){
-    if(event.key === 27){
+document.onkeypress = function (event) {
+    if (event.key === 27) {
         match = "canceled"
         console.log("canceled")
+        endGame()
     }
 }
 document.getElementById("_btnStart").addEventListener("click", function () {
+    newGame()
+})
+document.getElementById("_btnEnd").addEventListener("click", function () {
     clearTimeout(timesUp)
+    endGame()
 })
 // document.addEventListener("canplay", function(){
 
