@@ -142,6 +142,10 @@ let newGame = () => {
         }
     }
 }
+let playAudio = (audioFile) => {
+    let sound = new Audio(audioFile)
+    sound.play();
+}
 //^^^REMOVE CONSOLE LOG TESTING
 console.log(randNumber, correct, total, score, match)
 console.log(match)
