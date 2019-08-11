@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" align="left'">
     <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="css/homeycombs.css" /> -->
     <!-- CSS-Tricks  The Simplest Way to Load CSS Asynchronously -->
     <!-- by using media="print" basically says apply wip.css only when printing -->
     <!-- the browser will load the css without delays to rendering the page     -->
@@ -14,17 +13,18 @@
     <!-- css applies to this screen on load.                                    -->
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <title>Winnie the Pooh's Bee Factory</title>
+    <title>Winnie the Pooh's Hunny Factory</title>
 </head>
 
 <body>
-    <header>Winnie the Pooh's Bee Factory</header>
-    <img class="upperRight" src="images/6621b60df6e60771adb2e01fd3602197.gif" alt="pooh" align="right">
-    <img class="scoreboard" src="images/cartoon-wooden-sign-png-clipart_2702935.png" alt="pot" align="left">
-    <!-- <img class="backdrop" src="images/animated-backdrop.gif" alt="back" align="bottom"> -->
-    <div class="container">Container
-        
-
+    <!-- <header><h1>Hunny Factory</h1></header> -->
+    
+    <img class="pooh" src="images/pooh-bees-wanted.gif" alt="pooh">
+    <img class="scoreboard" src="images/SeekPng.com_cake-emoji-png_1477603.png" alt="scoreboard">
+    <!-- <img class="scoreboard" src="images/cartoon-wooden-sign-png-clipart_2702935.png" alt="scoreboard"> -->
+    <img class="backdrop" src="images/hun-woods-thewallpapers-1920-1080.jpeg" alt="backdrop">
+    
+    <div class="container">
         <div class="honeycombs">
             <div class="comb" id="hexagon">1</div>
             <div class="comb" id="redhex">2</div>
@@ -43,23 +43,21 @@
 
     <div class="scoreboard">
         <ul class="tabSet" id="liTabSet">
-            <li><span>Scoreboard</span></li>
-            <li>🧛 Rosemari <span>20</span></li>
-            <li><span>🐝 Bees <span>21</span></li>
-            <li>Timer: <span>02 seconds</span></li>
+            <li>🧛 RJB <span>20</span></li>
+            <li>🐝 Bees <span>21</span></li>
+            <li>Timer: <span>02 sec</span></li>
         </ul>
     </div>
+
     <div class="buttonGroup">
         <button class="btn" id="btnStart">Start</button>
         <button class="btn" id="btnEnd">End</button>
     </div>
-    </div>
-
 
     <div class="modal">
 
     </div>
-
+    
     <script src="javascript/app.js"></script>
 </body>
 

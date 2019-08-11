@@ -1,52 +1,61 @@
 body {
   z-index: -5000;
-  cursor: url(images/bee_PNG74719.png);
   font-family: 'Schoolbell', cursive;
   font-size: 1.5em;
   background-color: black;
   color: whitesmoke;
 }
-.backdrop{
-  z-index: -1000;
-  /* height: 80%; */
+.backdrop {
+  z-index: -6000;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  top: 0px;
-  /* right: 0px; */
+  right: 0px;
+  bottom: 0px;
 }
-.upperRight{
+.pooh {
   z-index: 5000;
   height: 80%;
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   right: 0px;
 }
-.scoreboard, .tabSet{
+/* div */
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   z-index: 5000;
-  height: 30%;
-  width: 30%;
-  text-align: center;
-  /* background-color: black; */
-  color: white;
+  height: 30vh;
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 100px;
 }
-.buttonGroup{
-  position: absolute;
-  font: 3em;
-}
-ul {
-  display: contents;
-}
-li {
+/* ul */
+.tabSet {
+  margin: 50% 0 0 20%;
+  top: 2%;
+  right: 2%;
+  bottom: 2%;
+  left: 2%;
+ 
+  /* border: solid white; */
+  color: whitesmoke;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  font-size: 95%;
+  text-indent: -55%;
+  font-optical-sizing: auto;
+  text-align: center;
   list-style: none;
-  font-size: 100%;
-  overflow: hidden;
+}
+.buttonGroup {
+  position: absolute;
+  font-size: 3em;
 }
 /* HEXAGON INSPIRATION FROM: 
-URL:  https://www.sarasoueidan.com/blog/css-shapes/
-*/
-/* ========================================= */
+URL:  https://www.sarasoueidan.com/blog/css-shapes/   
+       ========================================= */
 #hexagon {
   width: 100px;
   height: 55px;
@@ -75,145 +84,147 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   border-right: 50px solid transparent;
   border-top: 25px solid rgba(255, 255, 255, 0.288);
 }
-  /* #hexagon img {
+/* #hexagon img {
     display:inline-block;
     vertical-align:middle;
     margin:0 -10px;
   } */
-  /* #hexagon > .contents {
+
+/* #hexagon > .contents {
     position: absolute;
     top: 0; bottom: 0;
     left: 25%; right: 25%; 
   } */
-  /* ========================================= */
-/* #### RED                */
-  #redhex {
-    width: 100px;
-    height: 55px;
-    background: red;
-    position: relative;
-  }
-  #redhex:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid red;
-  }
-  #redhex:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid red;
-  }
-  /* ========================================= */
-  /*            #### BLUE           */
-  #bluehex {
-    width: 100px;
-    height: 55px;
-    background: blue;
-    position: relative;
-  }
-  #bluehex:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid blue;
-  }
-  #bluehex:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid blue;
-  }
-  /* ========================================= */
-  /*            #### GREEN           */
-  #greenhex {
-    width: 100px;
-    height: 55px;
-    background: green;
-    position: relative;
-  }
-  #greenhex:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid green;
-  }
-  #greenhex:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid green;
-  }
-  /* ========================================= */
-  /*            #### YELLOW           */
-  #yellowhex {
-    width: 100px;
-    height: 55px;
-    background: yellow;
-    position: relative;
-  }
-  #yellowhex:before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid yellow;
-  }
-  #yellowhex:after {
-    content: "";
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid yellow;
-  }
-  /* ========================================= */
-  .honeycombs{
-    display: block;
-    position: relative;
-    width: 60%;
-    margin:0 auto;
-    padding: 0;
-  }
-  /* .honeycombs div * {
+
+/* ========================================= */
+/*                   RED                     */
+#redhex {
+  width: 100px;
+  height: 55px;
+  background: red;
+  position: relative;
+}
+#redhex:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid red;
+}
+#redhex:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid red;
+}
+/* ========================================= */
+/*                    BLUE                   */
+#bluehex {
+  width: 100px;
+  height: 55px;
+  background: blue;
+  position: relative;
+}
+#bluehex:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid blue;
+}
+#bluehex:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid blue;
+}
+/* ========================================= */
+/*                   GREEN                   */
+#greenhex {
+  width: 100px;
+  height: 55px;
+  background: green;
+  position: relative;
+}
+#greenhex:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid green;
+}
+#greenhex:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid green;
+}
+/* ========================================= */
+/*                    YELLOW                 */
+#yellowhex {
+  width: 100px;
+  height: 55px;
+  background: yellow;
+  position: relative;
+}
+#yellowhex:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid yellow;
+}
+#yellowhex:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid yellow;
+}
+/* ========================================= */
+.honeycombs {
+  display: block;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+}
+/* .honeycombs div * {
     visibility: visible;
   }
   .honeycombs:after{
@@ -221,11 +232,11 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     display: block;
     clear: both;
   } */
-  /* 6n+4 select the 2nd hex of each row*/
-  .honeycombs div:nth-child(3n+2) { 
-    margin-left: 1%;
+/* 6n+4 select the 2nd hex of each row*/
+.honeycombs div:nth-child(3n+2) {
+  margin-left: 1%;
 }
-  /* 6n+4 shifts rows with left margin */
-.honeycombs div:nth-child(6n+4) { 
+/* 6n+4 shifts rows with left margin */
+.honeycombs div:nth-child(6n+4) {
   margin-left: 0.5%;
 }

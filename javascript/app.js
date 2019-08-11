@@ -1,9 +1,4 @@
-$(document).ready(function() {
-    $('.honeycombs').honeycombs({
-        combWidth: 250,
-        margin: 10
-    })
-})
+
 
 // ####  ----------------------------------------           GAME DATA           ------------------------------------------------  ####
 let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, "", "active", 0, 0]
@@ -188,10 +183,10 @@ document.onkeypress = function (event) {
         endGame()
     }
 }
-document.getElementById("_btnStart").addEventListener("click", function () {
+document.getElementById("btnStart").addEventListener("click", function () {
     newGame()
 })
-document.getElementById("_btnEnd").addEventListener("click", function () {
+document.getElementById("btnEnd").addEventListener("click", function () {
     clearTimeout(timesUp)
     endGame()
 })
