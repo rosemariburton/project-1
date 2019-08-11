@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" align="left'">
     <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
-    <!-- CSS-Tricks  The Simplest Way to Load CSS Asynchronously -->
-    <!-- by using media="print" basically says apply wip.css only when printing -->
-    <!-- the browser will load the css without delays to rendering the page     -->
-    <!-- ASYNCHRONOUSLY.  The onload attribute set to this.media = all  says    -->
-    <!-- css applies to this screen on load.                                    -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <title>Winnie the Pooh's Hunny Factory</title>
 </head>
@@ -20,8 +15,7 @@
     <header><h1>Pooh's Hunny Factory</h1></header>
     
     <img class="pooh" src="images/pooh-bees-wanted.gif" alt="pooh">
-    <img class="scoreboard" src="images/SeekPng.com_cake-emoji-png_1477603.png" alt="scoreboard">
-    <!-- <img class="scoreboard" src="images/cartoon-wooden-sign-png-clipart_2702935.png" alt="scoreboard"> -->
+    <img class="scoreboard" src="images/pooh-honey-jar.png" alt="scoreboard">
     <img class="backdrop" src="images/hun-woods-thewallpapers-1920-1080.jpeg" alt="backdrop">
     
     <div class="container">
@@ -42,6 +36,7 @@
         </div>
     </div>
 
+    <!-- HARD CODED TEMPORARILY -->
     <div class="scoreboard">
         <ul class="tabSet" id="liTabSet">
             <li>🧛 RJB <span>20</span></li>
@@ -51,12 +46,8 @@
     </div>
 
     <div class="buttonGroup">
-        <button class="btn" id="btnStart">Start</button>
+        <button class="btn" id="btnPlay">Play</button>
         <button class="btn" id="btnEnd">End</button>
-    </div>
-
-    <div class="modal">
-
     </div>
     
     <script src="javascript/app.js"></script>

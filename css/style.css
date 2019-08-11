@@ -1,5 +1,4 @@
 body {
-  cursor: url(hand.cur), pointer;
   z-index: -5000;
   font-family: 'Schoolbell', cursive;
   background-color: black;
@@ -22,6 +21,10 @@ body {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  -webkit-animation: introPooh 2s 1;
+  -moz-animation: introPooh 2s 1;
+  -o-animation: introPooh 2s 1;
+  animation: introPooh 2s 1;
 }
 
 /* div */
@@ -50,11 +53,6 @@ body {
   font-optical-sizing: auto;
   text-align: center;
   list-style: none;
-}
-
-.buttonGroup {
-  position: absolute;
-  font-size: 3em;
 }
 
 /* HEXAGON INSPIRATION FROM: 
@@ -93,7 +91,6 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 }
 
 /* ==================RED==================== */
-
 
 #redhex {
   width: 100px;
@@ -194,7 +191,6 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 
 /* ================YELLOW================== */
 
-
 #yellowhex {
   width: 100px;
   height: 55px;
@@ -260,10 +256,12 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 }
 
 /* margin-left: 41.05%; */
+
 #topRow {
   position: relative;
   /* margin-top: 1.6%; */
 }
+
 #middleRow {
   position: relative;
   margin-top: 1.6%;
@@ -274,4 +272,46 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #bottomRow {
   position: relative;
   margin-top: 1.6%;
+}
+
+/*  Start and End Buttons */
+
+.buttonGroup {
+  position: absolute;
+  bottom: 0%;
+  left: 43%;
+}
+
+.btn {
+  font-size: 2rem;
+  border-radius: 25%;
+  display: inline-block;
+  padding: 15px 25px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#btnPlay {
+  background-color: rgb(76, 175, 80);
+}
+
+#btnPlay:hover {
+  color: rgb(76, 175, 80);
+  background-color: rgb(255, 255, 255);
+}
+
+#btnEnd {
+  background-color: rgb(194, 28, 28);
+}
+
+#btnEnd:hover {
+  color: rgb(194, 28, 28);
+  background-color: rgb(255, 255, 255);
+}
+
+/* KEYFRAMES */
+
+@keyframes introPooh {
+  from {right: -500px;bottom: 0px;}
+  from {right: 0px;bottom: 0px;}
 }

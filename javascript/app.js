@@ -169,25 +169,26 @@ console.log("newGame()")
 
 // #### ----------------------------------------      EVENT HANDLER SECTION        ####  ####  ####  ####  ####  ####  ####  ####
 // ---- Load
-// document.addEventListener("load", function(){
+document.addEventListener("load", function(){
 
-// })
-// document.addEventListener("keypress", function(e){
-//     if(e.key === "Escape"){
-document.onkeypress = function (event) {
-    if (event.key === 27) {
-        match = "canceled"
-        console.log("canceled")
-        endGame()
+})
+window.addEventListener('keydown', function(e){
+    if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27) && (e.target.nodeName=='BODY')){
+        e.preventDefault();
+        return false;
     }
-}
-document.getElementById("btnStart").addEventListener("click", function () {
-    newGame()
+}, true);
+
+document.getElementById("btnPlay").addEventListener("click", function () {
+    
+    // newGame()
 })
 document.getElementById("btnEnd").addEventListener("click", function () {
-    clearTimeout(timesUp)
-    endGame()
+    // clearTimeout(timesUp)
+    // endGame()
 })
 // document.addEventListener("canplay", function(){
 
 //})
+
+// Sounds from:  https://www.soundjay.com/button-sounds-5.html  
