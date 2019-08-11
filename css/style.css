@@ -1,7 +1,6 @@
 body {
   z-index: -5000;
   font-family: 'Schoolbell', cursive;
-  font-size: 1.5em;
   background-color: black;
   color: whitesmoke;
 }
@@ -27,18 +26,20 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   z-index: 5000;
-  height: 30vh;
+  max-height: 30%;
+  block-size: 30%;
   position: absolute;
   bottom: 0px;
   left: 100px;
+  font-size: 2vmax;
 }
 /* ul */
 .tabSet {
-  margin: 50% 0 0 20%;
-  top: 2%;
+  margin: 30% 0 0 10%;
+  /* top: 2%;
   right: 2%;
   bottom: 2%;
-  left: 2%;
+  left: 2%; */
  
   /* border: solid white; */
   color: whitesmoke;
