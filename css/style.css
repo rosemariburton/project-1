@@ -95,7 +95,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #redhex {
   width: 100px;
   height: 55px;
-  background: rgba(255, 0, 0, 0.637);
+  background: #ff0000;
   position: relative;
 }
 
@@ -108,7 +108,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid rgba(255, 0, 0, 0.637);
+  border-bottom: 25px solid #ff0000;
 }
 
 #redhex:after {
@@ -120,7 +120,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid rgba(255, 0, 0, 0.637);
+  border-top: 25px solid #ff0000;
 }
 
 /* =================BLUE================== */
@@ -128,7 +128,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #bluehex {
   width: 100px;
   height: 55px;
-  background: rgba(0, 0, 255, 0.637);
+  background: #0000ff;
   position: relative;
 }
 
@@ -141,7 +141,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid rgba(0, 0, 255, 0.637);
+  border-bottom: 25px solid #0000ff;
 }
 
 #bluehex:after {
@@ -153,7 +153,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid rgba(0, 0, 255, 0.637);
+  border-top: 25px solid #0000ff;
 }
 
 /* =================GREEN================= */
@@ -161,7 +161,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #greenhex {
   width: 100px;
   height: 55px;
-  background: green;
+  background: #00ff00;
   position: relative;
 }
 
@@ -174,7 +174,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid green;
+  border-bottom: 25px solid #00ff00;
 }
 
 #greenhex:after {
@@ -186,7 +186,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid green;
+  border-top: 25px solid #00ff00;
 }
 
 /* ================YELLOW================== */
@@ -194,7 +194,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #yellowhex {
   width: 100px;
   height: 55px;
-  background: rgba(245, 216, 49, 0.637);
+  background: #ffd900;
   position: relative;
 }
 
@@ -207,7 +207,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid rgba(245, 216, 49, 0.637);
+  border-bottom: 25px solid #ffd900;
 }
 
 #yellowhex:after {
@@ -219,7 +219,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid rgba(245, 216, 49, 0.637);
+  border-top: 25px solid #ffd900;
 }
 
 /* ========================================= */
@@ -264,14 +264,14 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 
 #middleRow {
   position: relative;
-  margin-top: 1.6%;
+  margin-top: 2%;
   margin-left: 41.05%;
   ;
 }
 
 #bottomRow {
   position: relative;
-  margin-top: 1.6%;
+  margin-top: 2%;
 }
 
 /*  Start and End Buttons */

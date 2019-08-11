@@ -12,28 +12,37 @@
 </head>
 
 <body>
-    <header><h1>Pooh's Hunny Factory</h1></header>
-    
+    <header>
+        <h1>Pooh's Hunny Factory</h1>
+    </header>
+
     <img class="pooh" src="images/pooh-bees-wanted.gif" alt="pooh">
     <img class="scoreboard" src="images/pooh-honey-jar.png" alt="scoreboard">
     <img class="backdrop" src="images/hun-woods-thewallpapers-1920-1080.jpeg" alt="backdrop">
-    
+
     <div class="container">
         <div class="honeycombs" id="topRow">
-            <div class="comb" id="hexagon">1</div>
-            <a href="http://"><div class="comb" id="redhex">2</div></a>
-            
-            <div class="comb" id="hexagon">3</div>
+            <div class="comb" id="hexagon"></div>
+            <a href="#redhex">
+                <div class="comb" id="redhex"></div>
+            </a>
+            <div class="comb" id="hexagon"></div>
         </div>
         <div class="honeycombs" id="middleRow">
-            <div class="comb" id="bluehex">4</div>
-            <div class="comb" id="yellowhex">5</div>
-            <div class="comb" id="hexagon">6</div>
+                <a href="#bluehex">
+                <div class="comb" id="bluehex"></div>
+            </a>
+            <a href="#yellowhex">
+                <div class="comb" id="yellowhex"></div>
+            </a>
+            <div class="comb" id="hexagon"></div>
         </div>
         <div class="honeycombs" id="bottomRow">
-            <div class="comb" id="hexagon">7</div>
-            <div class="comb" id="greenhex">8</div>
-            <div class="comb" id="hexagon">9</div>
+            <div class="comb" id="hexagon"></div>
+            <a href="#greenhex">
+                <div class="comb" id="greenhex"></div>
+            </a>
+            <div class="comb" id="hexagon"></div>
         </div>
     </div>
 
@@ -50,7 +59,7 @@
         <button class="btn" id="btnPlay">Play</button>
         <button class="btn" id="btnEnd">End</button>
     </div>
-    
+
     <script src="javascript/app.js"></script>
 </body>
 

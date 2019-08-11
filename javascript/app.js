@@ -1,5 +1,5 @@
 // ####  ----------------------------------------           GAME DATA           ------------------------------------------------  ####
-let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, "", "active", 0, 0]
+let [sound, randNumber, correct, total, score, match, timesUp, iArray] = ["", 0, 0, 0, "", "active", 0, 0]
 
 // ---- User Profile (Stretch Goal)
 // array of objects
@@ -142,8 +142,26 @@ let newGame = () => {
         }
     }
 }
-let playAudio = (audioFile) => {
-    let sound = new Audio(audioFile)
+let activateDiv = (hexID) => {
+    switch (hexID) {
+        case 'redhex':
+            sound = new Audio('audio/red.mp3')
+            
+            console.log("red")
+            break
+        case 'bluehex':
+            sound = new Audio('audio/blue.mp3')
+            console.log("blue")
+            break
+        case 'yellowhex':
+            sound = new Audio('audio/yellow.mp3')
+            console.log("yellow")
+            break
+        default:
+            sound = new Audio('audio/green.mp3')
+            console.log("green")
+            break
+    }
     sound.play();
 }
 //^^^REMOVE CONSOLE LOG TESTING
@@ -173,18 +191,31 @@ console.log("newGame()")
 
 // #### ----------------------------------------      EVENT HANDLER SECTION        ####  ####  ####  ####  ####  ####  ####  ####
 // ---- Load
-document.addEventListener("load", function(){
+document.addEventListener("load", function () {
 
 })
-window.addEventListener('keydown', function(e){
-    if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27) && (e.target.nodeName=='BODY')){
+window.addEventListener('keydown', function (e) {
+    if ((e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27) && (e.target.nodeName == 'BODY')) {
         e.preventDefault();
         return false;
     }
 }, true);
-
-document.getElementById("btnPlay").addEventListener("click", function () {
+document.getElementById("redhex").addEventListener("click", function () {
+    activateDiv("redhex")
     
+})
+document.getElementById("bluehex").addEventListener("click", function () {
+    activateDiv("bluehex")
+    
+})
+document.getElementById("yellowhex").addEventListener("click", function () {
+    activateDiv("yellowhex")
+})
+document.getElementById("greenhex").addEventListener("click", function () {
+    activateDiv("greenhex")
+})
+document.getElementById("btnPlay").addEventListener("click", function () {
+
     // newGame()
 })
 document.getElementById("btnEnd").addEventListener("click", function () {
