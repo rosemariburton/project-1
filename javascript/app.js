@@ -1,5 +1,3 @@
-
-
 // ####  ----------------------------------------           GAME DATA           ------------------------------------------------  ####
 let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, "", "active", 0, 0]
 
@@ -7,13 +5,13 @@ let [randNumber, correct, total, score, match, timesUp, iArray] = [0, 0, 0, "", 
 // array of objects
 // ****
 let user = [
-{avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30"},
-{avatar: "🖖", flm: "nim", password: "passWorD", topScore: "25"},
-{avatar: "👽", flm: "et", password: "123abc!@#", topScore: "20"}
+    { avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30" },
+    { avatar: "🖖", flm: "nim", password: "passWorD", topScore: "25" },
+    { avatar: "👽", flm: "et", password: "123abc!@#", topScore: "20" }
 ]
 
 // ---- Colors Array
-let colors = ["red", "blue", "green", "yellow","blue"]
+let colors = ["red", "blue", "green", "yellow", "blue"]
 
 // ---- Simon Sequence Array traditional, random array of colors 
 let simon = []

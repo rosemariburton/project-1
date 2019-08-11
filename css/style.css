@@ -1,4 +1,5 @@
 body {
+  cursor: url(hand.cur), pointer;
   z-index: -5000;
   font-family: 'Schoolbell', cursive;
   background-color: black;
@@ -42,11 +43,6 @@ body {
 
 .tabSet {
   margin: 30% 0 0 10%;
-  /* top: 2%;
-  right: 2%;
-  bottom: 2%;
-  left: 2%; */
-  /* border: solid white; */
   color: whitesmoke;
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
   font-size: 95%;
@@ -271,7 +267,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #middleRow {
   position: relative;
   margin-top: 1.6%;
-  margin-left: 585px;
+  margin-left: 41.05%;
   ;
 }
 
