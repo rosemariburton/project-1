@@ -60,7 +60,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #hexagon {
   width: 100px;
   height: 55px;
-  background: rgba(255, 255, 255, 0.288);
+  background: rgba(0, 0, 0, 0.262);
   position: relative;
 }
 #hexagon:before {
@@ -72,7 +72,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid rgba(255, 255, 255, 0.288);
+  border-bottom: 25px solid rgba(0, 0, 0, 0.262);
 }
 #hexagon:after {
   content: "";
@@ -83,7 +83,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid rgba(255, 255, 255, 0.288);
+  border-top: 25px solid rgba(0, 0, 0, 0.262);
 }
 /* #hexagon img {
     display:inline-block;
@@ -102,7 +102,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #redhex {
   width: 100px;
   height: 55px;
-  background: red;
+  background: rgba(255, 0, 0, 0.637);
   position: relative;
 }
 #redhex:before {
@@ -114,7 +114,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid red;
+  border-bottom: 25px solid rgba(255, 0, 0, 0.637);
 }
 #redhex:after {
   content: "";
@@ -125,14 +125,14 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid red;
+  border-top: 25px solid rgba(255, 0, 0, 0.637);
 }
 /* ========================================= */
 /*                    BLUE                   */
 #bluehex {
   width: 100px;
   height: 55px;
-  background: blue;
+  background: rgba(0, 0, 255, 0.637);
   position: relative;
 }
 #bluehex:before {
@@ -144,7 +144,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid blue;
+  border-bottom: 25px solid rgba(0, 0, 255, 0.637);
 }
 #bluehex:after {
   content: "";
@@ -155,7 +155,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid blue;
+  border-top: 25px solid rgba(0, 0, 255, 0.637);
 }
 /* ========================================= */
 /*                   GREEN                   */
@@ -192,7 +192,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 #yellowhex {
   width: 100px;
   height: 55px;
-  background: yellow;
+  background: rgba(245, 216, 49, 0.637);
   position: relative;
 }
 #yellowhex:before {
@@ -204,7 +204,7 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 25px solid yellow;
+  border-bottom: 25px solid rgba(245, 216, 49, 0.637);
 }
 #yellowhex:after {
   content: "";
@@ -215,15 +215,19 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 25px solid yellow;
+  border-top: 25px solid rgba(245, 216, 49, 0.637);
 }
 /* ========================================= */
 .honeycombs {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   position: relative;
-  width: 60%;
+  width: 25%;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
+  border: solid white;
 }
 /* .honeycombs div * {
     visibility: visible;
@@ -233,11 +237,37 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
     display: block;
     clear: both;
   } */
-/* 6n+4 select the 2nd hex of each row*/
+.comb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 3n+2 select the 2nd hex of each row*/
 .honeycombs div:nth-child(3n+2) {
-  margin-left: 1%;
+  margin: 1%;
+}
+.honeycombs div:nth-child(6n+4), .honeycombs div:nth-child(6n+5), .honeycombs div:nth-child(6n+6) {
+  margin-top: -6.9285714285%;
+  margin-bottom: -6.9285714285%;
+  /* -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg); */
+}
+#middleRow {
+  position: relative;
+  margin-top: 1.1%;
+  margin-left: 580px;
+}
+#bottomRow {
+  position: relative;
+  margin-top: 1.1%;
+  /* margin-left: 580px; */
 }
 /* 6n+4 shifts rows with left margin */
-.honeycombs div:nth-child(6n+4) {
+/* .honeycombs div:nth-child(6n+4) {
   margin-left: 0.5%;
-}
+} */
