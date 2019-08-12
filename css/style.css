@@ -309,6 +309,12 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
   background-color: rgb(255, 255, 255);
 }
 
+.toggle {
+  position: absolute;
+  bottom: 0%;
+  rifght: 43%;
+}
+
 /* KEYFRAMES */
 
 @keyframes introPooh {
