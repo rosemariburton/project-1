@@ -33,7 +33,7 @@ You must meet all of the following requirements to pass project 1.
 - [X] At least 30 git commits made throughout project week
 - [X] Project board (Trello or Github Projects and Issues) are used throughout project week
 - [X] Project board must have a minimum of 3 columns noting to-do, doing, and done tasks
-- [ ] Has Readme file
-- [ ] Readme file has link to deployed app  
-- [ ] Readme file has link to project board
-- [ ] Readme file has wireframe images
+- [X] Has Readme file
+- [X] Readme file has link to deployed app  
+- [X] Readme file has link to project board
+- [X] Readme file has wireframe images

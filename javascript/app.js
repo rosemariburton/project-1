@@ -109,7 +109,7 @@ let endGame = () => {
         if(match === "complete") {
             alert(`You won: ${document.getElementById("liUser").innerHTML}`)
         } else {
-            alert(`You tied: ${document.getElementById("liUser").innerHTML}`)
+            alert(`You gave up: ${document.getElementById("liUser").innerHTML}`)
         }
     } 
     simon = []
@@ -135,10 +135,12 @@ let newGame = () => {
     // if player presses esc then match="canceled"
     takeTurn("computer","active")
     for (let upperLimit = 0; upperLimit < simon.length; upperLimit++) {
-        for (let lowerLimit = 0; lowerLimit < simon.length; lowerLimit++) {
-            setTimeout(takeTurn("human", evalResponse(lowerLimit)), 4000) 
+        for (let lowerLimit = 0; lowerLimit < player.length; lowerLimit++) {
+            alert(`player is going strong ${lowerLimit} ${player.length}`)
+            setTimeout(takeTurn("human", evalResponse(lowerLimit)), 40000) 
         }
         takeTurn("computer","active")
+        console.log(`loop on ${simon.length}`)
     }
 }
 
@@ -172,27 +174,28 @@ let activateDiv = (hexID) => {
     }
 }
 //^^^REMOVE CONSOLE LOG TESTING
-console.log(randNumber, correct, total, score, match)
-console.log(match)
-console.log(user)
-console.log(colors)
-console.log(simon)
+// console.log(randNumber, correct, total, score, match)
+// console.log(match)
+// console.log(user)
+// console.log(colors)
+// console.log(simon)
 // console.log(musical)
-console.log(player)
-console.log(games)
-console.log(newGame)
-addToSimon()
-console.log(simon)
+// console.log(player)
+// console.log(games)
+// console.log(newGame)
+// addToSimon()
+// console.log(simon)
 // addToPlayer("bluehex")
-console.log(player)
-evalResponse(0)
-console.log(evalResponse(0))
-console.log("newGame()")
-activateDiv("redhex")
-activateDiv("bluehex")
-activateDiv("yellowhex")
-activateDiv("greenhex")
-console.log(simon)
+// console.log(player)
+// evalResponse(0)
+// console.log(evalResponse(0))
+// console.log("newGame()")
+// activateDiv("redhex")
+// activateDiv("bluehex")
+// activateDiv("yellowhex")
+// activateDiv("greenhex")
+// console.log(simon)
+
 
 // #### ----------------------------------------      EVENT HANDLER SECTION        ####  ####  ####  ####  ####  ####  ####  ####
 window.addEventListener('keydown', function (e) {
