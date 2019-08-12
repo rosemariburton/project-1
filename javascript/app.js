@@ -1,5 +1,5 @@
 // #### GAME DATA
-let [sound, randNumber, correct, score, timesUp, rounds] = ["", 0, 0, 0, 0, 0]
+let [sound, randNumber, correct, score, timesUp, rounds,hexID] = ["", 0, 0, 0, 0, 0, ""]
 
 let user = [
     { avatar: "🧛", flm: "rjb", password: "periwinKL3", topScore: "30" },
@@ -18,14 +18,15 @@ let difficulty = { easy: 10, medium: 20, hard: 30 }
 // ####  GAME FUNCTIONS
 // ---- Add a random sequence to Simon Array
 let addToSimon = () => {
-    console.log("Get the next sequence for Simon to play.")
     randNumber = Math.floor(Math.random() * Math.floor(4))
     simon.push(colors[randNumber])
     activateDiv(colors[randNumber])
+    console.log(simon)
 }
 // ---- Update Player Array
 let addToPlayer = (addColor) => {
     player.push(addColor)
+    console.log(player)
 }
 // ---- Initialize the Match
 let initalizeMatch = () => {
@@ -36,20 +37,18 @@ let initalizeMatch = () => {
 // ---- Take a turn
 let takeTurn = (whosTurn, y) => {
     if (whosTurn === "computer") {
-        console.log(`computer says ${whosTurn}`)
         addToSimon()
         rounds++
         document.getElementById("liBee").innerHTML = `🐝 BEE ${rounds}`
     } else {
-        console.log(`player's ${y} turn`)
-        addToPlayer()
+        addToPlayer(hexID)
         // The setTimeout() method calls a function or evaluates an expression after milliseconds.
         // Tip: Use the clearTimeout() method to prevent the function from running.
         // setTimeout(function, milliseconds, param1, param2, ...)
         let interval = setInterval(evalResponse(), 40000, y)
-        // if(y >= simon.length){
-        //     clearInterval(interval)
-        // }
+        if(y >= simon.length){
+            window.clearInterval(interval)
+        }
     }
 }
 // ---- Is the current selection correct
@@ -58,7 +57,10 @@ let evalResponse = (y) => {
         correct++
         document.getElementById("liUser").innerHTML = `🧛 RJB ${correct}`
         score = `${correct} out of ${rounds}`
+        console.log("correct")
     } else {
+        console.log("wrong")
+        window.clearInterval()
         endGame()
     }
 }
@@ -94,12 +96,13 @@ let activateDiv = (hexID) => {
 let newGame = () => {
     initalizeMatch()
     rounds = 0
+    // y = 0
     takeTurn("computer",rounds)
     // for(let x = 0; x < rounds; x++){
-    for (let y = 0; y < rounds; y++) {
+    // for (let y = 0; y < rounds; y++) {
         takeTurn("computer", y)
         takeTurn("player", y)
-    }
+    // }
     // }
 }
 
@@ -118,21 +121,21 @@ window.addEventListener('keydown', function (e) {
     }
 }, true);
 document.getElementById("redhex").addEventListener("click", function () {
-    // clearTimeout(timesUp)
+    clearTimeout(timesUp)
     activateDiv("redhex")
 
 })
 document.getElementById("bluehex").addEventListener("click", function () {
-    // clearTimeout(timesUp)
+    clearTimeout(timesUp)
     activateDiv("bluehex")
 
 })
 document.getElementById("yellowhex").addEventListener("click", function () {
-    // clearTimeout(timesUp)
+    clearTimeout(timesUp)
     activateDiv("yellowhex")
 })
 document.getElementById("greenhex").addEventListener("click", function () {
-    // clearTimeout(timesUp)
+    clearTimeout(timesUp)
     activateDiv("greenhex")
 })
 document.getElementById("btnPlay").addEventListener("click", function () {
