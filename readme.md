@@ -32,19 +32,19 @@
 
 ## Wireframe
 ---
-![Wireframe](wireframe/Poohs Hunny Factory Wireframe.png)
+![Wireframe](wireframe/PoohsHunnyFactoryWireframe.png)
 
 ## Screenshot
 ---
-![Hunny Factory](wireframe/Poohs Hunny Factory Screenshot.png)
+![Hunny Factory](wireframe/PoohsHunnyFactoryScreenshot.png)
 
 ## Deployed App Links
 ---
-[Link](https://hunny-factory.netlify.com/#redhex)
+[Hunny Factory](https://hunny-factory.netlify.com/#redhex)
 
 ## Project Board
 ---
-[Link](https://github.com/rosemariburton/project-1/projects/1)
+[Github Project Board](https://github.com/rosemariburton/project-1/projects/1)
 
 ## Future Development
 ---
