@@ -58,6 +58,7 @@ Use Tone.js, a framework for creating interactive music in the browser . https:/
 
 ### Shuffle Simon
 Use flex order to shuffle the hexagon divs around after Simon has a turn.
+
 ---
 ---
 ## Helpful Resources
