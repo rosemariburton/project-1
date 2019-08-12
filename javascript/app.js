@@ -142,24 +142,29 @@ let newGame = () => {
         }
     }
 }
+
 let activateDiv = (hexID) => {
     switch (hexID) {
         case 'redhex':
             sound = new Audio('audio/red.mp3')
-            
-            console.log("red")
+            // Shout out to soloLearn CSS
+            document.getElementById("redhex").style.background = "radial-gradient(circle, white 25%, #ff0000, #ff0000)"
+            setTimeout(function(){document.getElementById("redhex").style.background = "#ff0000", 12000;})
             break
         case 'bluehex':
             sound = new Audio('audio/blue.mp3')
-            console.log("blue")
+            document.getElementById("bluehex").style.background = "radial-gradient(circle, white 25%, #0000ff, #0000ff)"
+            setTimeout(function(){document.getElementById("bluehex").style.background = "#0000ff", 12000;})
             break
         case 'yellowhex':
             sound = new Audio('audio/yellow.mp3')
-            console.log("yellow")
+            document.getElementById("yellowhex").style.background = "radial-gradient(circle, white 25%, #ffd900, #ffd900)"
+            setTimeout(function(){document.getElementById("yellowhex").style.background = "#ffd900", 12000;})
             break
         default:
             sound = new Audio('audio/green.mp3')
-            console.log("green")
+            document.getElementById("greenhex").style.background = "radial-gradient(circle, white 25%, #00ff00, #00ff00)"
+            setTimeout(function(){document.getElementById("greenhex").style.background = "#00ff00", 12000;})
             break
     }
     sound.play();
