@@ -312,7 +312,8 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
 .toggle {
   position: absolute;
   bottom: 0%;
-  rifght: 43%;
+  right: 33%;
+  font-size: 1.5m;
 }
 
 /* KEYFRAMES */

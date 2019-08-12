@@ -24,9 +24,9 @@ You must meet all of the following requirements to pass project 1.
 ## Functionality
 
 - [X] Render a game in the browser
-- [ ] User can play single iteration of game
+- [X] User can play single iteration of game
 - [ ] User can win/tie when winning conditions are met
-- [ ] User can lose when losing conditions are met
+- [X] User can lose when losing conditions are met
 
 ## Planning / Process / Submission
 
