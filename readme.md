@@ -49,7 +49,7 @@
 ## Future Development
 ---
 ### Musical Simon
-- Use Tone.js, a framework for creating interactive music in the browser . https://tonejs.github.io/
+Use Tone.js, a framework for creating interactive music in the browser . https://tonejs.github.io/
 
 - [ ] Mary Had A Little Lamb
 - [ ] Twinkle Twinkle Little Start
