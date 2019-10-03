@@ -1,58 +1,62 @@
 body {
-  z-index: -5000;
-  font-family: 'Schoolbell', cursive;
-  background-color: black;
-  color: whitesmoke;
+	z-index: -5000;
+	font-family: "Schoolbell", cursive;
+	background-color: black;
+	color: whitesmoke;
+}
+
+.custom-cursor {
+	cursor: url(../images/bee_PNG74719.cursor.png), auto;
 }
 
 .backdrop {
-  z-index: -6000;
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+	z-index: -6000;
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
 }
 
 .pooh {
-  z-index: 5000;
-  height: 80%;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  -webkit-animation: introPooh 2s 1;
-  -moz-animation: introPooh 2s 1;
-  -o-animation: introPooh 2s 1;
-  animation: introPooh 2s 1;
+	z-index: 5000;
+	height: 80%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	-webkit-animation: introPooh 2s 1;
+	-moz-animation: introPooh 2s 1;
+	-o-animation: introPooh 2s 1;
+	animation: introPooh 2s 1;
 }
 
 /* div */
 
 .scoreboard {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  z-index: 5000;
-  max-height: 30%;
-  block-size: 30%;
-  position: absolute;
-  bottom: 0px;
-  left: 100px;
-  font-size: 2vmax;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	z-index: 5000;
+	max-height: 30%;
+	block-size: 30%;
+	position: absolute;
+	bottom: 0px;
+	left: 100px;
+	font-size: 2vmax;
 }
 
 /* ul */
 
 .tabSet {
-  margin: 30% 0 0 10%;
-  color: whitesmoke;
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-  font-size: 95%;
-  text-indent: -55%;
-  font-optical-sizing: auto;
-  text-align: center;
-  list-style: none;
+	margin: 30% 0 0 10%;
+	color: whitesmoke;
+	text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+	font-size: 95%;
+	text-indent: -55%;
+	font-optical-sizing: auto;
+	text-align: center;
+	list-style: none;
 }
 
 /* HEXAGON INSPIRATION FROM: 
@@ -60,265 +64,272 @@ URL:  https://www.sarasoueidan.com/blog/css-shapes/
        ========================================= */
 
 #hexagon {
-  width: 100px;
-  height: 55px;
-  background: rgba(255, 255, 255, 0.548);
-  position: relative;
+	width: 100px;
+	height: 55px;
+	background: rgba(255, 255, 255, 0.548);
+	position: relative;
 }
 
 #hexagon:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid rgba(255, 255, 255, 0.548);
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid rgba(255, 255, 255, 0.548);
 }
 
 #hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid rgba(255, 255, 255, 0.548);
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid rgba(255, 255, 255, 0.548);
 }
 
 /* ==================RED==================== */
 
 #redhex {
-  width: 100px;
-  height: 55px;
-  background: #ff0000;
-  position: relative;
+	width: 100px;
+	height: 55px;
+	background: #ff0000;
+	position: relative;
 }
 
 #redhex:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid #ff0000;
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #ff0000;
 }
 
 #redhex:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid #ff0000;
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #ff0000;
 }
 
 /* =================BLUE================== */
 
 #bluehex {
-  width: 100px;
-  height: 55px;
-  background: #0000ff;
-  position: relative;
+	width: 100px;
+	height: 55px;
+	background: #0000ff;
+	position: relative;
 }
 
 #bluehex:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid #0000ff;
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #0000ff;
 }
 
 #bluehex:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid #0000ff;
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #0000ff;
 }
 
 /* =================GREEN================= */
 
 #greenhex {
-  width: 100px;
-  height: 55px;
-  background: #00ff00;
-  position: relative;
+	width: 100px;
+	height: 55px;
+	background: #00ff00;
+	position: relative;
 }
 
 #greenhex:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid #00ff00;
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #00ff00;
 }
 
 #greenhex:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid #00ff00;
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #00ff00;
 }
 
 /* ================YELLOW================== */
 
 #yellowhex {
-  width: 100px;
-  height: 55px;
-  background: #ffd900;
-  position: relative;
+	width: 100px;
+	height: 55px;
+	background: #ffd900;
+	position: relative;
 }
 
 #yellowhex:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 25px solid #ffd900;
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #ffd900;
 }
 
 #yellowhex:after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 25px solid #ffd900;
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #ffd900;
 }
 
 /* ========================================= */
 
 .honeycombs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  position: relative;
-  width: 25%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  /* border: solid white; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	position: relative;
+	width: 25%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	/* border: solid white; */
 }
 
 .comb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* 3n+2 select the 2nd hex of each row*/
 
-.honeycombs div:nth-child(3n+2) {
-  margin: 1%;
+.honeycombs div:nth-child(3n + 2) {
+	margin: 1%;
 }
 
-.honeycombs div:nth-child(6n+4), .honeycombs div:nth-child(6n+5), .honeycombs div:nth-child(6n+6) {
-  margin-top: -6.9285714285%;
-  margin-bottom: -6.9285714285%;
+.honeycombs div:nth-child(6n + 4),
+.honeycombs div:nth-child(6n + 5),
+.honeycombs div:nth-child(6n + 6) {
+	margin-top: -6.9285714285%;
+	margin-bottom: -6.9285714285%;
 }
 
 /* margin-left: 41.05%; */
 
 #topRow {
-  position: relative;
-  /* margin-top: 1.6%; */
+	position: relative;
+	/* margin-top: 1.6%; */
 }
 
 #middleRow {
-  position: relative;
-  margin-top: 2%;
-  margin-left: 41.05%;
-  ;
+	position: relative;
+	margin-top: 2%;
+	margin-left: 41.05%;
 }
 
 #bottomRow {
-  position: relative;
-  margin-top: 2%;
+	position: relative;
+	margin-top: 2%;
 }
 
 /*  Start and End Buttons */
 
 .buttonGroup {
-  position: absolute;
-  bottom: 0%;
-  left: 43%;
+	position: absolute;
+	bottom: 0%;
+	left: 43%;
 }
 
 .btn {
-  font-size: 2rem;
-  border-radius: 25%;
-  display: inline-block;
-  padding: 15px 25px;
-  text-align: center;
-  color: rgb(255, 255, 255);
+	font-size: 2rem;
+	border-radius: 25%;
+	display: inline-block;
+	padding: 15px 25px;
+	text-align: center;
+	color: rgb(255, 255, 255);
 }
 
 #btnPlay {
-  background-color: rgb(76, 175, 80);
+	background-color: rgb(76, 175, 80);
 }
 
 #btnPlay:hover {
-  color: rgb(76, 175, 80);
-  background-color: rgb(255, 255, 255);
+	color: rgb(76, 175, 80);
+	background-color: rgb(255, 255, 255);
 }
 
 #btnEnd {
-  background-color: rgb(194, 28, 28);
+	background-color: rgb(194, 28, 28);
 }
 
 #btnEnd:hover {
-  color: rgb(194, 28, 28);
-  background-color: rgb(255, 255, 255);
+	color: rgb(194, 28, 28);
+	background-color: rgb(255, 255, 255);
 }
 
 .toggle {
-  position: absolute;
-  bottom: 0%;
-  right: 33%;
-  font-size: 1.5m;
+	position: absolute;
+	bottom: 0%;
+	right: 33%;
+	font-size: 1.5m;
 }
 
 /* KEYFRAMES */
 
 @keyframes introPooh {
-  from {right: -500px;bottom: 0px;}
-  from {right: 0px;bottom: 0px;}
+	from {
+		right: -500px;
+		bottom: 0px;
+	}
+	from {
+		right: 0px;
+		bottom: 0px;
+	}
 }
