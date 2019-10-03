@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" align="left'" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<title>Winnie the Pooh's Hunny Factory</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" align="left'">
-    <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <title>Winnie the Pooh's Hunny Factory</title>
-</head>
+	<body class="custom-cursor">
+		<header>
+			<h1>Pooh's Hunny Factory</h1>
+		</header>
 
-<body>
-    <header>
-        <h1>Pooh's Hunny Factory</h1>
-    </header>
+		<img class="pooh" src="images/pooh-bees-wanted.gif" alt="pooh" />
+		<img class="scoreboard" src="images/pooh-honey-jar.png" alt="scoreboard" />
+		<img
+			class="backdrop"
+			src="images/hun-woods-thewallpapers-1920-1080.jpeg"
+			alt="backdrop"
+		/>
 
-    <img class="pooh" src="images/pooh-bees-wanted.gif" alt="pooh">
-    <img class="scoreboard" src="images/pooh-honey-jar.png" alt="scoreboard">
-    <img class="backdrop" src="images/hun-woods-thewallpapers-1920-1080.jpeg" alt="backdrop">
+		<div class="container custom-cursor">
+			<div class="honeycombs" id="topRow">
+				<div class="comb" id="hexagon"></div>
+				<a href="#redhex">
+					<div class="comb" id="redhex"></div>
+				</a>
+				<div class="comb" id="hexagon"></div>
+			</div>
+			<div class="honeycombs" id="middleRow">
+				<a href="#bluehex">
+					<div class="comb" id="bluehex"></div>
+				</a>
+				<a href="#yellowhex">
+					<div class="comb" id="yellowhex"></div>
+				</a>
+				<div class="comb" id="hexagon"></div>
+			</div>
+			<div class="honeycombs" id="bottomRow">
+				<div class="comb" id="hexagon"></div>
+				<a href="#greenhex">
+					<div class="comb" id="greenhex"></div>
+				</a>
+				<div class="comb" id="hexagon"></div>
+			</div>
+		</div>
 
-    <div class="container">
-        <div class="honeycombs" id="topRow">
-            <div class="comb" id="hexagon"></div>
-            <a href="#redhex">
-                <div class="comb" id="redhex"></div>
-            </a>
-            <div class="comb" id="hexagon"></div>
-        </div>
-        <div class="honeycombs" id="middleRow">
-                <a href="#bluehex">
-                <div class="comb" id="bluehex"></div>
-            </a>
-            <a href="#yellowhex">
-                <div class="comb" id="yellowhex"></div>
-            </a>
-            <div class="comb" id="hexagon"></div>
-        </div>
-        <div class="honeycombs" id="bottomRow">
-            <div class="comb" id="hexagon"></div>
-            <a href="#greenhex">
-                <div class="comb" id="greenhex"></div>
-            </a>
-            <div class="comb" id="hexagon"></div>
-        </div>
-    </div>
+		<div class="toggle">
+			<input type="radio" name="difficulty" value="easy" checked /> Easy<br />
+			<input type="radio" name="difficulty" value="medium" /> Medium<br />
+			<input type="radio" name="difficulty" value="hard" /> Hard
+		</div>
 
-    <div class="toggle">
-        <input type="radio" name="difficulty" value="easy" checked> Easy<br>
-        <input type="radio" name="difficulty" value="medium"> Medium<br>
-        <input type="radio" name="difficulty" value="hard"> Hard
-    </div>
+		<!-- HARD CODED TEMPORARILY -->
+		<div class="scoreboard">
+			<ul class="tabSet" id="liTabSet">
+				<li id="liUser">🧛 RJB 0</li>
+				<li id="liBee">🐝 Bees 0</li>
+				<!-- <li id="liTimer">Timer: 00 sec</li> -->
+			</ul>
+		</div>
 
-    <!-- HARD CODED TEMPORARILY -->
-    <div class="scoreboard">
-        <ul class="tabSet" id="liTabSet">
-            <li id="liUser">🧛 RJB 0</li>
-            <li id="liBee">🐝 Bees 0</li>
-            <!-- <li id="liTimer">Timer: 00 sec</li> -->
-        </ul>
-    </div>
+		<div class="buttonGroup">
+			<button class="btn" id="btnPlay">Play</button>
+			<button class="btn" id="btnEnd">End</button>
+		</div>
 
-    <div class="buttonGroup">
-        <button class="btn" id="btnPlay">Play</button>
-        <button class="btn" id="btnEnd">End</button>
-    </div>
-
-    <script src="javascript/app.js"></script>
-</body>
-
+		<script src="javascript/app.js"></script>
+	</body>
 </html>
